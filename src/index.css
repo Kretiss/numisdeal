@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'RedHatDisplay Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/RedHatDisplay-Regular.woff2') format('woff2'),
+    url('./assets/fonts/RedHatDisplay-Regular.woff') format('woff'),
+    url('./assets/fonts/RedHatDisplay-Regular.ttf') format('ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RedHatDisplay Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/RedHatDisplay-Medium.woff2') format('woff2'),
+    url('./assets/fonts/RedHatDisplay-Medium.woff') format('woff'),
+    url('./assets/fonts/RedHatDisplay-Medium.ttf') format('ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RedHatDisplay SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/RedHatDisplay-SemiBold.woff2') format('woff2'),
+    url('./assets/fonts/RedHatDisplay-SemiBold.woff') format('woff'),
+    url('./assets/fonts/RedHatDisplay-SemiBold.ttf') format('ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RedHatDisplay Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/RedHatDisplay-Bold.woff2') format('woff2'),
+    url('./assets/fonts/RedHatDisplay-Bold.woff') format('woff'),
+    url('./assets/fonts/RedHatDisplay-Bold.ttf') format('ttf');
+  font-display: swap;
+}
+
+body {
+  background-color: #FBFBFB;
+}
+
+@layer utilities {
+  .wrapper-width {
+    max-width: 1195px;
+  }
+}
+
+@layer components {
+  .dropdown-icon::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 10px;
+    background-image: url('src/assets/icons/dropdown_arrow_yellow_icon.svg');
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%);
+  }
+
+  .notification-dot::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: theme('colors.yellow.DEFAULT');
+    top: 0;
+    right: 0;
+  }
+}

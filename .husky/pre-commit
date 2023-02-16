@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+cd numisdeal/themes/numis2023/frontend/ && npx lint-staged
